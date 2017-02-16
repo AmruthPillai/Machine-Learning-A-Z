@@ -14,3 +14,8 @@ y = dataset.iloc[:, 1].values
 # a Training Set and Test Set
 from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
+
+# Fitting Simple Linear Regression to the Training Set
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
