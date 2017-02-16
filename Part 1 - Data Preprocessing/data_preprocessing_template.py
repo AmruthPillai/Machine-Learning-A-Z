@@ -29,3 +29,8 @@ X = onehotencoder.fit_transform(X).toarray()
 # Encode the 'Purchased' column categorically
 labelencoder_y = LabelEncoder()
 y = labelencoder_y.fit_transform(y)
+
+# Splitting the dataset into
+# a Training Set and Test Set
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
